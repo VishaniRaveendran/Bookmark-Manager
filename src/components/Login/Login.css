@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
+
+
 .loginBackground {
     padding-top: 80px;
     background-color: #F9F9F9;
@@ -8,6 +10,7 @@
     height: 100%;
     min-height: 100vh;
     display: flex;
+
 }
 
 
@@ -28,8 +31,10 @@
 }
 
 .loginContainer {
+    display: block;
+    justify-content: center;
     width: 400px;
-    height: 550px;
+    height: 600px;
     border-radius: 17.74px;
     background: #FFF;
     box-shadow: 0px 17.73954px 137.18575px 0px rgba(48, 56, 125, 0.12);
@@ -39,7 +44,8 @@
     padding-left: 60px;
     padding-right: 60px;
     padding-bottom: 60px;
-    justify-content: center;
+    box-sizing: border-box
+        /* justify-content: center; */
 
 }
 
@@ -47,96 +53,126 @@
     margin-top: 10;
     color: rgba(48, 56, 125, 0.69);
     font-family: 'Gilroy';
-    font-size: 30px;
+    font-size: 20px;
     font-style: normal;
     font-weight: bold;
     text-align: start;
+    padding-bottom: 10px;
 
 }
 
-.labelText {
+
+.form-group {
+    position: relative;
     display: flex;
-    padding-left: 2px;
+    flex-direction: column;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+
+}
+
+.form-group label {
+    display: flex;
     color: rgba(48, 56, 125, 0.52);
     font-family: 'Poppins';
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 600;
-    line-height: normal;
+    padding-bottom: 10px;
     text-align: start;
 }
 
-.form-control {
-    /* width: 382.197px;
-    height: 60px; */
-    flex-shrink: 0;
+.form-group input {
+    width: 245px;
+    height: 30px;
     border-radius: 8px;
-    border: 1px solid rgba(48, 56, 125, 0.32);
-    background: rgba(226, 226, 229, 0.18);
-    color: rgba(48, 56, 125, 0.52);
     font-family: 'Poppins';
     font-size: 10px;
     font-style: italic;
-    font-weight: 200;
-    line-height: normal;
+    border: 1px solid rgba(48, 56, 125, 0.32);
+    background: rgba(226, 226, 229, 0.18);
+
+    &::placeholder {
+        text-overflow: ellipsis !important;
+        color: rgba(48, 56, 125, 0.35);
+    }
+
 }
 
 .forgetPassword {
     color: #4D74F9;
     text-align: center;
-    font-family: Gilroy;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
+    font-family: 'Gilroy';
+    font-size: 12px;
     text-align: start;
     text-decoration: underline;
     line-height: normal;
 }
 
 .loginButton {
+    width: 100%;
+    height: 40px;
     background-color: #4D74F9;
     color: #fff;
     text-align: center;
-    font-family: Gilroy;
+    font-family: 'Gilroy';
     font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+    border-radius: 8px;
 }
 
 
 .loginWithText {
-    color: var(--shade-paragraph, #696D6D);
-    font-family: Gilroy;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    color: #696D6D;
+    font-family: 'Gilroy';
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 3;
 }
 
 .socialMediaLogin {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
 }
 
 .socialMediaLoginIcon {
-    width: 66px;
-    height: 60px;
-    flex-shrink: 0;
-    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin-right: 11px;
+}
+
+.svgIcon {
+    width: 20px;
+    height: 20px;
+    border: none !important;
+    background-color: transparent !important;
+    outline: none;
+    align-items: center;
 }
 
 .socialMediaButton {
-    width: 66px;
-    height: 60px;
-    flex-shrink: 0;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+    background-color: #fff;
+    border: 1px solid rgba(48, 56, 125, 0.32);
+    align-items: center;
+    box-sizing: border-box;
+    padding-block: 10px;
 }
 
 .dontHaveAccount {
+    display: flex;
     color: rgba(48, 56, 125, 0.69);
     text-align: center;
-    font-family: Gilroy;
-    font-size: 16px;
+    font-family: 'Gilroy';
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -145,11 +181,12 @@
 .signUpText {
     color: #4D74F9;
     text-align: center;
-    font-family: Gilroy;
-    font-size: 16px;
+    font-family: 'Gilroy';
+    font-size: 14px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: bold;
     line-height: normal;
+    text-decoration: underline;
 }
 
 /* html,

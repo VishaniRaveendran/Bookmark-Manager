@@ -1,11 +1,13 @@
 // import React from 'react'
 import './Login.css'
-import './../../fonts/Gilroy-FREE/Gilroy-FREE/Gilroy-ExtraBold.otf'
-import facebookIcon from "./../../assets/Facebook.png"
-import googleIcon from "./../../assets/Google.png"
-import appleIcon from "./../../assets/Apple.png"
-import linkedinIcon from "./../../assets/Linkedin.png"
-
+import facebookIcon from "./../../assets/facebook.svg"
+import googleIcon from "./../../assets/google.svg"
+import appleIcon from "./../../assets/apple.svg"
+import linkedinIcon from "./../../assets/linkedin.svg"
+import './../../fonts/font.css'
+import './../../fonts/Gilroy-Bold.ttf'
+import './../../fonts/Gilroy-Medium.ttf'
+import './../../fonts/Gilroy-SemiBold.ttf'
 
 function Login() {
     return (
@@ -15,7 +17,6 @@ function Login() {
                     Collection</p>
             </div>
             <div className="loginContainer">
-
                 <form className='LoginForm'>
                     <div className="loginBoxHeader">
                         <p className="loginBoxHeaderText">Login</p>
@@ -56,21 +57,23 @@ function Login() {
 
                     <div className='socialMediaLogin'>
                         <div className='socialMediaLoginIcon'>
-                            <button className='socialMediaButton'><img src={facebookIcon} alt="Facebook" /></button>
+                            <button className='socialMediaButton'>
+                                <img className='svgIcon' src={facebookIcon} alt="Facebook" />
+                            </button>
                         </div>
                         <div className='socialMediaLoginIcon'>
-                            <button className='socialMediaButton'><img src={googleIcon} alt="Google" /></button>
+                            <button className='socialMediaButton'><img className='svgIcon' src={googleIcon} alt="Google" /></button>
                         </div>
                         <div className='socialMediaLoginIcon'>
-                            <button className='socialMediaButton'><img src={linkedinIcon} alt="LinkedIn" /></button>
+                            <button className='socialMediaButton'><img className='svgIcon' src={linkedinIcon} alt="LinkedIn" /></button>
                         </div>
                         <div className='socialMediaLoginIcon'>
-                            <button className='socialMediaButton'><img src={appleIcon} alt="Apple" /></button>
+                            <button className='socialMediaButton'><img className='svgIcon' src={appleIcon} alt="Apple" /></button>
                         </div>
                     </div>
 
                     <div className='dontHaveAccount'>
-                        Don't have an account? <span className='signUpText'>Sign up</span>
+                        Don't have an account?  <span><a className="signUpText" href="/sign-in"> Sign up</a></span>
                     </div>
 
                 </form>
