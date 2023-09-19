@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.loginBackground {
+    padding-top: 80px;
+    background-color: #F9F9F9;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+
+.startText {
+    padding-top: 50px;
+    padding-left: 242px;
+    padding-right: 200px;
+    font-family: 'Poppins';
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 602;
+    line-height: normal;
+    text-align: start;
+    background: linear-gradient(180deg, #6A82FF 0%, #E16AFF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.loginContainer {
+    width: 400px;
+    height: 550px;
+    border-radius: 17.74px;
+    background: #FFF;
+    box-shadow: 0px 17.73954px 137.18575px 0px rgba(48, 56, 125, 0.12);
+}
+
+.LoginForm {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 60px;
+    justify-content: center;
+
+}
+
+.loginBoxHeaderText {
+    margin-top: 10;
+    color: rgba(48, 56, 125, 0.69);
+    font-family: 'Gilroy';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: start;
+
+}
+
+.labelText {
+    display: flex;
+    padding-left: 2px;
+    color: rgba(48, 56, 125, 0.52);
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: start;
+}
+
+.form-control {
+    /* width: 382.197px;
+    height: 60px; */
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid rgba(48, 56, 125, 0.32);
+    background: rgba(226, 226, 229, 0.18);
+    color: rgba(48, 56, 125, 0.52);
+    font-family: 'Poppins';
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 200;
+    line-height: normal;
+}
+
+.forgetPassword {
+    color: #4D74F9;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    text-align: start;
+    text-decoration: underline;
+    line-height: normal;
+}
+
+.loginButton {
+    background-color: #4D74F9;
+    color: #fff;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+
+.loginWithText {
+    color: var(--shade-paragraph, #696D6D);
+    font-family: Gilroy;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.socialMediaLogin {
+    display: flex;
+}
+
+.socialMediaLoginIcon {
+    width: 66px;
+    height: 60px;
+    flex-shrink: 0;
+    padding-right: 10px;
+}
+
+.socialMediaButton {
+    width: 66px;
+    height: 60px;
+    flex-shrink: 0;
+
+}
+
+.dontHaveAccount {
+    color: rgba(48, 56, 125, 0.69);
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.signUpText {
+    color: #4D74F9;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* html,
+.card {
+    padding: 0px 15px;
+    border-radius: 20px
+} */
+
+.c1 {
+    background-color: #fff2f1;
+    border-radius: 20px
+}
+
+a {
+    margin: 0px;
+    font-size: 13px;
+    border-radius: 7px;
+    text-decoration: none;
+    color: black
+}
+
+a:hover {
+    color: #e0726c;
+    background-color: #fff2f1
+}
+
+.nav-link {
+    padding: 1rem 1.4rem;
+    margin: 0rem 0.7rem
+}
+
+.ac {
+    font-weight: bold;
+    color: #e0726c;
+    font-size: 12px
+}
+
+input,
+button {
+    width: 96%;
+    background-color: #fff2f1;
+    border-radius: 8px;
+    padding: 8px 17px;
+    font-size: 13px;
+    border: 1px solid #f5f0ef;
+    outline: none;
+}
+
+
+/* input: {
+    text-decoration: none
+} */
+
+.bt {
+    background-color: #ff4133;
+    border: 1px solid rgb(300, 200, 200)
+}
+
+form {
+    margin-top: 70px
+}
+
+form>* {
+    margin: 10px 0px
+}
+
+#forgot {
+    margin: 0px -60px
+}
+
+#register {
+    text-align: center
+}
+
+img {
+    background-color: antiquewhite
+}
+
+.wlcm {
+    font-size: 30px
+}
+
+.sp1 {
+    font-size: 5px
+}
+
+.sp1>span {
+    background-color: #f0c3be
+}
+
+/* body{height: 100%}body{background-color: #4052e4;display: grid;place-items: center} */
