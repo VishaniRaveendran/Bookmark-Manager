@@ -1,5 +1,5 @@
 import React from 'react'
-import './Login.css'
+import './SignUp.css'
 import facebookIcon from "./../../assets/facebook.svg"
 import googleIcon from "./../../assets/google.svg"
 import appleIcon from "./../../assets/apple.svg"
@@ -9,11 +9,12 @@ import './../../fonts/Gilroy-Bold.ttf'
 import './../../fonts/Gilroy-Medium.ttf'
 import './../../fonts/Gilroy-SemiBold.ttf'
 import { useDispatch, useSelector } from 'react-redux'
-import { loginUser } from '../../store/UserSlice'
 import { useNavigate } from 'react-router-dom'
+import { signupUser } from '../../store/UserSlice'
 
-function Login() {
+function SignUp() {
     //states
+    const [name, setName] = React.useState('');
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
 
@@ -21,40 +22,57 @@ function Login() {
     const { loading, error } = useSelector((state) => state.user)
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const handleLoginEvent = (e) => {
+    const handleSignUpEvent = (e) => {
         e.preventDefault();
 
-        let userCredentials = {
-            username: email,
-            password: password
+        let signUpuserCredentials = {
+            email: email,
+            first_name: name,
+            password: password,
+            confirm_password: password,
+            last_name: name
+
         }
-        dispatch(loginUser(userCredentials)).then((result) => {
-            if (result.payload === 200) {
+        dispatch(signupUser(signUpuserCredentials)).then((result) => {
+            if (result.payload === 201) {
                 setEmail('')
                 setPassword('')
+                setName('')
                 navigate('/Home')
             }
         });
-    
+
     }
     return (
-        <div className="loginBackground">
+        <div className="signUpBackground">
             <div>
                 <p className='startText'>Manage your Links<span>{<br />}</span>
                     Collection</p>
             </div>
-            <div className="loginContainer">
-                <form className='LoginForm' onSubmit={handleLoginEvent}>
-                    <div className="loginBoxHeader">
-                        <p className="loginBoxHeaderText">Login</p>
+            <div className="signUpContainer">
+                <form className='signUpForm' onSubmit={handleSignUpEvent}>
+                    <div className="signUpBoxHeader">
+                        <p className="signUpBoxHeaderText">Sign Up</p>
                     </div>
 
+                    <div className="form-group">
+                        <label className='labelText'>
+                            Name
+                        </label>
+                        <input
+                            type="Name"
+                            className="form-control"
+                            placeholder="Your name here"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                        />
+                    </div>
                     <div className="form-group">
                         <label className='labelText'>
                             Email
                         </label>
                         <input
-                            type="email"
+                            type="Email"
                             className="form-control"
                             placeholder="Email address here"
                             value={email}
@@ -79,41 +97,41 @@ function Login() {
                         <div className='forgetPassword'>Forgot Password?</div>
 
                     </div>
-                    <button type="submit" className="loginButton">
-                        {loading ? 'Loading...' : 'Login'}
-                        {/* Login */}
+                    <button type="submit" className="signUpButton">
+                        {loading ? 'Loading...' : 'Sign Up'}
                     </button>
                     {error && <div className='errorText'>{error}</div>}
-                    <p className="loginWithText">
-                        Or Login with
+                    <p className="signUpWithText">
+                        Or Sign Up with
                     </p>
 
-                    <div className='socialMediaLogin'>
-                        <div className='socialMediaLoginIcon'>
+                    <div className='socialMediasignUp'>
+                        <div className='socialMediasignUpIcon'>
                             <button className='socialMediaButton'>
                                 <img className='svgIcon' src={facebookIcon} alt="Facebook" />
                             </button>
                         </div>
-                        <div className='socialMediaLoginIcon'>
+                        <div className='socialMediasignUpIcon'>
                             <button className='socialMediaButton'><img className='svgIcon' src={googleIcon} alt="Google" /></button>
                         </div>
-                        <div className='socialMediaLoginIcon'>
+                        <div className='socialMediasignUpIcon'>
                             <button className='socialMediaButton'><img className='svgIcon' src={linkedinIcon} alt="LinkedIn" /></button>
                         </div>
-                        <div className='socialMediaLoginIcon'>
+                        <div className='socialMediasignUpIcon'>
                             <button className='socialMediaButton'><img className='svgIcon' src={appleIcon} alt="Apple" /></button>
                         </div>
                     </div>
 
-                    <div className='dontHaveAccount'>
-                        Don't have an account?  <span><a className="signUpText" href="/SignUp"> Sign up</a></span>
+                    <div className='HaveAccount'>
+                        Have an account?  <span><a className="signUpText" href="/Home">Login</a></span>
                     </div>
 
                 </form>
 
             </div>
         </div >
+
     )
 }
 
-export default Login
+export default SignUp
