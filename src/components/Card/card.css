@@ -1,3 +1,41 @@
-.FavouriteCard{
-    
+.typeName {
+    display: flex;
+    color: rgba(48, 56, 125, 0.69);
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-left: 50px;
+    align-items: center;
+}
+
+.favourite {
+    text-align: end;
+    margin: 10px;
+    align-items: end;
+    float: 'right'
+}
+
+
+.typeText {
+    padding-top: 20px;
+    color: rgba(48, 56, 125, 0.69);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.typeNameText {
+    text-align: center;
+    color: rgba(48, 56, 125, 0.69);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }

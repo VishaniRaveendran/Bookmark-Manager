@@ -63,6 +63,8 @@
 
 .form-group {
     position: relative;
+    display: flex;
+    flex-direction: column;
     padding-bottom: 10px;
     box-sizing: border-box;
 

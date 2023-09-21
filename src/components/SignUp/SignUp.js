@@ -123,7 +123,7 @@ function SignUp() {
                     </div>
 
                     <div className='HaveAccount'>
-                        Have an account?  <span><a className="signUpText" href="/Home">Login</a></span>
+                        Have an account?  <span><a className="signUpText" href="/">Login</a></span>
                     </div>
 
                 </form>

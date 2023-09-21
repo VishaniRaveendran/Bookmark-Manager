@@ -1,7 +1,6 @@
 import * as React from "react";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
 import { Grid, TextField } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import FavouriteCard from '../Card/FavouriteCard';
@@ -11,6 +10,13 @@ import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import Notification from './../../assets/notification.svg'
 import AvatarImage from './../../assets/avatar.jpeg'
+import MusicIcon from './../../assets/music.svg'
+import MovieIcon from './../../assets/movie.svg'
+import CollectionCard from "../Card/CollectionCard";
+import EducationIcon from "./../../assets/education.svg"
+import DocumentIcon from "./../../assets/document.svg"
+import FinancialIcon from "./../../assets/financial.svg"
+
 
 function Home() {
 
@@ -42,27 +48,22 @@ function Home() {
                         My favorite
                         &nbsp;&nbsp;&nbsp;
                         <svg xmlns="http://www.w3.org/2000/svg" width="950" height="2" viewBox="0 0 996 2" fill="none">
-                            <path d="M0.300308 1.26756H995.703" stroke="#30387D" stroke-opacity="0.12" stroke-width="1.18264" />
+                            <path d="M0.300308 1.26756H995.703" stroke="#30387D" strokeOpacity="0.12" strokeWidth="1.18264" />
                         </svg>
                     </div>
-                    <Grid container spacing={3}>
-                        <Grid item xs={12} sm={6} md={3}>
+                    <Grid container spacing={15} sx={{ paddingTop: 4, paddingBottom: 4 }}>
+                        <Grid item xs={6} sm={6} md={3}>
                             <FavouriteCard
-                                title='My first folder'
-                                image='https://images.unsplash.com/photo-1634179127416-4b5b8b5b5b0b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNnx8fGVufDB8fHx8&ixlib=rb-1.2.1&w=1000&q=80'
-                                description='This is my first folder' />
+                                text='Movies'
+                                badge='7'
+                                image={MovieIcon} />
                         </Grid>
-                        <Grid item xs={12} sm={6} md={3}>
+                        <Grid item xs={6} sm={6} md={3}>
                             <FavouriteCard
-                                title='My first folder'
-                                image='https://images.unsplash.com/photo-1634179127416-4b5b8b5b5b0b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNnx8fGVufDB8fHx8&ixlib=rb-1.2.1&w=1000&q=80'
-                                description='This is my first folder' />
-                        </Grid>
-                        <Grid item xs={12} sm={6} md={3}>
-                            <FavouriteCard
-                                title='My first folder'
-                                image='https://images.unsplash.com/photo-1634179127416-4b5b8b5b5b0b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNnx8fGVufDB8fHx8&ixlib=rb-1.2.1&w=1000&q=80'
-                                description='This is my first folder' />
+                                text='Music'
+                                badge='9'
+                                image={MusicIcon}
+                            />
                         </Grid>
                     </Grid>
 
@@ -72,18 +73,62 @@ function Home() {
                         Recent Collections
                         &nbsp;&nbsp;&nbsp;
                         <svg xmlns="http://www.w3.org/2000/svg" width="950" height="2" viewBox="0 0 996 2" fill="none">
-                            <path d="M0.300308 1.26756H995.703" stroke="#30387D" stroke-opacity="0.12" stroke-width="1.18264" />
+                            <path d="M0.300308 1.26756H995.703" stroke="#30387D" strokeOpacity="0.12" strokeWidth="1.18264" />
                         </svg>
                     </div>
+                    <Grid container spacing={2} sx={{ paddingTop: 4, paddingBottom: 4, display: 'flex', flexDirection: 'row' }}>
+                        <Grid item xs={12} sm={6} md={3}>
+                            <CollectionCard
+                                text='Education'
+                                badge='11'
+                                image={EducationIcon} />
+                        </Grid>
+                        <Grid item xs={12} sm={6} md={3}>
+                            <CollectionCard
+                                text='Document'
+                                badge='8'
+                                image={DocumentIcon}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={6} md={3}>
+                            <CollectionCard
+                                text='Financial'
+                                badge='3'
+                                image={FinancialIcon}
+                            />
+                        </Grid>
+                    </Grid>
                 </div>
                 <div className='allCollection'>
                     <div className='headingText'>
                         All Collections
                         &nbsp;&nbsp;&nbsp;
                         <svg xmlns="http://www.w3.org/2000/svg" width="950" height="2" viewBox="0 0 996 2" fill="none">
-                            <path d="M0.300308 1.26756H995.703" stroke="#30387D" stroke-opacity="0.12" stroke-width="1.18264" />
+                            <path d="M0.300308 1.26756H995.703" stroke="#30387D" strokeOpacity="0.12" strokeWidth="1.18264" />
                         </svg>
                     </div>
+                    <Grid container spacing={2} sx={{ paddingTop: 4, paddingBottom: 4, flexDirection: 'row' }}>
+                        <Grid item xs={12} sm={6} md={3}>
+                            <CollectionCard
+                                text='Education'
+                                badge='11'
+                                image={EducationIcon} />
+                        </Grid>
+                        <Grid item xs={12} sm={6} md={3}>
+                            <CollectionCard
+                                text='Document'
+                                badge='8'
+                                image={DocumentIcon}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={6} md={3}>
+                            <CollectionCard
+                                text='Financial'
+                                badge='3'
+                                image={FinancialIcon}
+                            />
+                        </Grid>
+                    </Grid>
                 </div>
 
             </div>
@@ -104,13 +149,12 @@ function Home() {
                                         placeholder="Search"
                                         variant="standard"
                                         size="large"
-                                        // onChange={handleSearch}
                                         InputLabelProps={{
                                             fontFamily: 'Poppins',
                                         }}
                                         InputProps={{
                                             disableUnderline: true,
-                                            paddingLeft: 4,
+
                                             color: '#30387d85',
                                             startAdornment: (
                                                 <SearchIcon color="#30387d85" fontSize="medium" />
@@ -118,7 +162,7 @@ function Home() {
                                         }}
                                         sx={{
                                             input: {
-                                                paddingLeft: 1,
+
                                                 color: '#30387d85',
                                                 "&::placeholder": {
                                                     fontFamily: 'poppins',
@@ -144,11 +188,9 @@ function Home() {
                         <div className="collectionContainer">
                             <form className='addCollectionForm'>
 
-                                <div className="addcollectionHeaderext">Add collection</div>
-
-
-
-
+                                <div className="addcollectionHeaderext">
+                                    Add collection
+                                </div>
                                 <div className="form-group">
                                     <label className='labelText'>
                                         Collection Name
@@ -156,15 +198,16 @@ function Home() {
                                     <input
                                         type="Collection name here"
                                         className="form-control"
-                                        placeholder="Email address here"
+                                        placeholder="Collection name here"
                                     />
                                 </div>
 
                                 <div className="form-group">
+
                                     <label className='labelText'>
                                         Select  Icon Color
                                     </label>
-
+                                    {/* <Dropdown /> */}
                                     <input
                                         type="password"
                                         className="form-control"
@@ -172,7 +215,8 @@ function Home() {
                                     />
                                 </div>
                                 <button type="submit" className="loginButton">
-                                    Login
+                                    Add collection
+                                    {/* + */}
                                 </button>
                             </form>
 
