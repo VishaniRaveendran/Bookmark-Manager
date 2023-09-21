@@ -31,8 +31,11 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 
 Images of the completed UI
+## Login Page
 ![Alt text](image.png)
 
-![Alt text](image-1.png)
+## Singup Page
+![Alt text](image-3.png)
 
+## Home Page
 ![Alt text](image-2.png)
